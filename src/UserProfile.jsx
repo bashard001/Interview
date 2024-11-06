@@ -4,14 +4,16 @@ function UserProfile() {
   const [state, setState] = useState();
 
   useEffect(() => {
+
     // Simulate a 2 Second delay in setting user data
  
       setState({
-        user: {
-          name: "Alice"
-        }
+            user: {
+              name: "Alice",
+              score: 0
+            } 
       });
- 
+      
   }, []);
 
   // Second step is to display the user's name or "Loading..."
@@ -20,6 +22,7 @@ function UserProfile() {
       <h2>User Profile</h2>
       {/* Safely display the user's name or "Loading..." */}
       <p>Name: { /* Your code here */ }</p>
+      <p>Score: { /* Your code here */ }</p>
     </div>
   );
 }

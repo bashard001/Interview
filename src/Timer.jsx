@@ -14,6 +14,7 @@ function Timer() {
       <button>add 10</button>
       <button>pause</button>
       <button>Play</button>
+      <div></div>
     </div>
   );
 }

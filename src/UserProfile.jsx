@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function UserProfile() {
   const [state, setState] = useState();
 
-  useEffect(() => {
 
-    // Simulate a 2 Second delay in setting user data
+
+    // Simulate a 2 Second delay when the component mounts before setting user data
  
-      setState({
-            user: {
-              name: "Alice",
-              score: 0
-            } 
-      });
+      // setState({
+      //       user: {
+      //         name: "Alice",
+      //         score: 0
+      //       } 
+      // });
       
-  }, []);
+
 
   // Second step is to display the user's name or "Loading..."
   return (

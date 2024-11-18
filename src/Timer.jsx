@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 
 function Timer() {
     const [time, setTime] = useState(0);
+    const [inputValue, setInputValue] = useState("");
+
+    const handleButtonClick = () => {
+        // TODO: Focus on the input element when the button is clicked
+        //Modify the InputFocus component so that clicking the button focuses the text input.
+    };
 
 
 
@@ -14,7 +20,14 @@ function Timer() {
       <button>add 10</button>
       <button>pause</button>
       <button>Play</button>
-      <div></div>
+      <div>
+            <input
+                type="text"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+            />
+            <button onClick={handleButtonClick}>Focus Input</button>
+        </div>
     </div>
   );
 }

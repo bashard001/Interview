@@ -1,7 +1,7 @@
-import { useUser } from "./user-context/user";
+
 
 function DisplayUser() {
-    const { userState, setRerender } = useUser();
+
 
       
 
@@ -11,9 +11,8 @@ function DisplayUser() {
     <div>
       <h2>User Profile</h2>
       {/* Safely display the user's name or "Loading..." */}
-      <p>Name: { userState?.user?.name }</p>
+      <p>Name: { /* Your code here */ }</p>
       <p>Score: { /* Your code here */ }</p>
-      <button onClick={() => setRerender(Date())}>test fetch only called once</button>
     </div>
   );
 }

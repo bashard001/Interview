@@ -1,4 +1,4 @@
-import { Children, createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState } from "react";
 
 const UserContext = createContext();
 const useUser = () => useContext(UserContext);
@@ -6,11 +6,12 @@ const useUser = () => useContext(UserContext);
 
 const UserProvider = ({children}) => {
     const [userState, setUserState] = useState();
-    const [rerender, setRerender] = useState(true);
 
-console.log(rerender)
+    console.log('rerender')
 
 const simulateFetch = () => {
+    // Simulating a delay in fetching user data
+    console.log('fetching')
     setTimeout(() => {
         setUserState({
             user: {
@@ -20,6 +21,7 @@ const simulateFetch = () => {
         });
     }, 2000);
 }
+
  
     return (
         <UserContext.Provider value={{userState}}>

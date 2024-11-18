@@ -26,5 +26,5 @@ function UserProfile() {
     </div>
   );
 }
-
+//<p>Score: { state.user.score || 'Loading...' }</p>
 export default UserProfile;
